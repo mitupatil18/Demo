@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface YourDataRepository extends JpaRepository<YourDataEntity, Long> {
-    // Custom queries or methods can be added here if needed
+
 }

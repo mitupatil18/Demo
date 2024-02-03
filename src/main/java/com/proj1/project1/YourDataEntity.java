@@ -1,30 +1,33 @@
 package com.proj1.project1;
 
 import jakarta.persistence.*;
+import jdk.jfr.Name;
 
 @Entity
-@Table(name = "Employee") // Specify the table name
+@Table(name = "Student")
 public class YourDataEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     private String name;
+
     private String email;
 
-    // Constructors, getters, and setters
 
+    private String college;
     public YourDataEntity() {
-        // Default constructor
+
     }
 
-    public YourDataEntity(String name, String email) {
+    public YourDataEntity(String name, String email, String college) {
         this.name = name;
         this.email = email;
+        this.college = college;
     }
 
-    // Getter and setter methods
 
     public Long getId() {
         return id;
@@ -48,5 +51,12 @@ public class YourDataEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getCollege() {
+        return college;
+    }
+
+    public void setCollege(String college) {
+        this.college = college;
     }
 }
